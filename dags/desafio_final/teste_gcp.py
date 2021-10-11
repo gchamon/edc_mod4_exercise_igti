@@ -7,8 +7,7 @@ from airflow.utils.dates import days_ago
 from airflow.models import Variable
 from google.cloud import storage
 
-json_account_info = json.loads(Variable.get("SECRET_GCP_CREDENTIALS_JSON"))
-google_storage = storage.Client.from_service_account_info(json_account_info)
+google_storage = storage.Client()
 
 
 def list_buckets():
