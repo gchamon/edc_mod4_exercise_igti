@@ -11,7 +11,7 @@ google_storage = storage.Client()
 
 
 def list_buckets():
-    print(google_storage.list_buckets())
+    print(list(google_storage.list_buckets()))
 
 
 with DAG(
